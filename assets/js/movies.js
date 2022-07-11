@@ -37,7 +37,7 @@ const inputSearchHandler = (e) => {
 
     if (searchString && searchString.length > 3 && searchString !== searchLast) {
       if (!triggerMode) clearMoviesMarkup(moviesList);
-      getData(`$siteUrl}?s=${searchString}&apikey=6bafc949`)
+      getData(`${siteUrl}?s=${searchString}&apikey=6bafc949`)
         .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
         .catch((err) => console.error(err));
     }
